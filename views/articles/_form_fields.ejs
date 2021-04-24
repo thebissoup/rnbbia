@@ -1,0 +1,69 @@
+<div class="test-circle circle1 floating "></div>
+      <div class="form-card">
+          <h2>NEW ARTICLE</h2>
+
+          <form action="/articles" method="POST" >
+
+          <label for="title">
+            TITLE:
+          </label>
+          
+          <input required type="text" name="title" id="title" class="form-input-text">
+
+            <br>
+            
+          <label for="description">
+            DESCRIPTION:
+          </label>
+          <textarea name="description" id="description" cols="40" rows="6"></textarea>
+
+            <br>
+
+          <label for="markdown">
+            MARKDOWN:
+          </label>
+          <input type="text" name="markdown" id="markdown">
+
+            <br>
+            
+          <label for="genre">
+            GENRE:
+          </label>
+            <br>
+          <div class="grid-ish">
+            <a class="col HIP-HOP hvr-float">HIP-HOP</a>
+            <a class="col RNB hvr-float">RNB</a>
+            <a class="col POP hvr-float">POP</a>
+            <a class="col SOUL hvr-float">SOUL</a>
+            <a class="col INDIE hvr-float">INDIE</a>
+            <a class="col ALTERNATIVE hvr-float">ALTERNATIVE</a>
+            <a class="col GOSPEL hvr-float">GOSPEL</a>
+            <a class="col HOUSE hvr-float">HOUSE</a>
+            <a class="col MCS">MORE COMING SOON...</a>
+          </div>
+
+            <br>
+
+          <label for="image-upload">
+            IMAGE UPLOAD:
+          </label>
+
+          <input type="file" id="image-file" hidden="hidden">
+
+          <a type="button" class="custom-button choose">CHOOSE A FILE</a>
+          <span class="custom-text">No file chosen</span>
+
+          <br>
+
+          <div class="image-preview" id="imagePreview">
+            <img src="" alt="Image Preview" class="image-preview-image">
+            <span class="image-preview-default-text">IMAGE PREVIEW</span>
+          </div>
+          
+          <br>
+
+          <a href="/" class="custom-button cancel">CANCEL</a>
+          <button type="submit" hidden="hidden" id="real-submit">SAVE</button>
+          <a class ="custom-button save" id="custom-submit">SAVE</a>
+        </form>
+      </div>
