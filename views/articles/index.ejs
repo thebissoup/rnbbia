@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts & css -->
     <link rel="stylesheet" href="https://use.typekit.net/ysm6kpn.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src = "script.js" defer></script>
+    <link rel="stylesheet" href="css/new.css">
+    <link rel="stylesheet" href="css/lightslider.css">
+    <!-- javascript -->
+    <script src="js/JQuery3.3.1.js"></script>
+    <script src="js/lightslider.js"></script>
+    <script src = "js/new.js" defer></script>   
     <title>RNBBIA</title>
 </head>
 <body>
+    <!-- navigation -->
     <nav class="navbar">
         <a class="homelink" href="#">
             <img src="resources/tumblr_phkofdZh1E1v3dkmxo1_400.png" alt="">
@@ -35,27 +41,111 @@
             </ul>
         </div>
     </nav>
+    <!-- main content -->
+    <div class="content">
+        <!-- this week -->
+        <main>
+            <div class="main-header">
+            <h2>THIS WEEK</h2>
+            <div class="center-button">
+              <a href="new.html">ADD VIDEO</a>
+            </div>
+            </div>
 
-    
-     <div class="content">
+            
+        </main>
+        <!-- this week carousel -->
+    </div>
+    <ul id="responsive" class="cs-hidden">
+        <li class="item-a">
+            <div class="showcase-box">
+              <iframe src="https://www.youtube.com/embed/2fHph8nT4yM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- <img src="resources/tinydesk.png" alt=""> -->
+            </div>
+        </li>
+        <li class="item-b">
+            <div class="showcase-box">
+              <iframe src="https://www.youtube.com/embed/BNpPJpdeMns" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- <img src="resources/hopetala.png" alt=""> -->
+            </div>
+        </li>
+        <li class="item-c">
+            <div class="showcase-box">
+              <iframe src="https://www.youtube.com/embed/0-PlG-SU8sc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- <img src="resources/colorsiamddb.png" alt=""> -->
+            </div>
+        </li>
+        <li class="item-d">
+            <div class="showcase-box">
+              <iframe src="https://www.youtube.com/embed/xRoUZVfrnHU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- <img src="resources/hallexlacey.png" alt=""> -->
+            </div>
+        </li>
+        <li class="item-e">
+            <div class="showcase-box">
+              <iframe src="https://www.youtube.com/embed/9f5zD7ZSNpQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- <img src="resources/nonamerainforest.png" alt=""> -->
+            </div>
+        </li>
+    </ul>
+    <div class="content">
+        <!-- news -->
         <main>
             <div class="main-header">
             <h2>NEWS</h2>
             <div class="center-button">
-              <a href="/articles/new">NEW ARTICLE</a>
+              <a href="new.html">NEW ARTICLE</a>
             </div>
             </div>
             
-            <% articles.forEach(article => { %>
-                <article>
-                    <img src="<%= article.imageFilePath %>" alt="">
-                      <h3><%= article.title %></h3>
-                      <p><%= article.genre %></p>
-                </article>
-            <% })%>
-            
+            <article>
+                <img src="resources/lilnasmontero.jpg" alt="">
+                  <h3>Lil Nas X Drops It Low, High To the Right</h3>
+                  <p>HIP-HOP</p>
+            </article>
+
+            <article>
+                <img src="resources/kissmemore.jpeg" alt="">
+                  <h3>Doja Cat Taps SZA For 'Kiss Me More' Collab</h3>
+                  <p>RAP</p>
+            </article>
         </main>
     </div>
+        
+    
+    
 
+    <!-- slider script -->
+    <script>
+        $(document).ready(function() {
+    $('#responsive').lightSlider({
+        item:3,
+        auto: true,
+        loop: true,
+        pauseOnHover: true,
+        slideMove:1,
+        easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+        speed:600,
+        responsive : [
+            {
+                breakpoint:1000,
+                settings: {
+                    item:2,
+                    slideMove:1,
+                    slideMargin:6,
+                  }
+            },
+            {
+                breakpoint:600,
+                settings: {
+                    item:1,
+                    slideMove:1
+                  }
+            }
+        ]
+    });  
+  });
+    </script>
+    
 </body>
 </html>
